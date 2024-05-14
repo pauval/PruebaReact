@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './MiApi.css'; // Archivo de estilos CSS para Buscador
+import './MiApi.css'; 
 
 function MiApi() {
   const [feriados, setFeriados] = useState([]);
@@ -10,7 +10,7 @@ function MiApi() {
       try {
         const response = await fetch('https://api.boostr.cl/feriados/en.json');
         const data = await response.json();
-        console.log('Data from API:', data); // Verificar los datos recibidos de la API en la consola
+        console.log('Data from API:', data);
         setFeriados(data.data);
         setIsLoading(false);
       } catch (error) {

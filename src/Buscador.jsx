@@ -1,5 +1,5 @@
 
-import './Buscador.css'; // Archivo de estilos CSS para Buscador
+import './Buscador.css'; 
 import React, { useState } from 'react';
 
 function Buscador({ feriados }) {
@@ -16,7 +16,6 @@ function Buscador({ feriados }) {
       );
     });
 
-    // Ordenar los resultados por fecha
     const sortedResults = filteredResults.sort((a, b) => {
       return new Date(a.date) - new Date(b.date);
     });

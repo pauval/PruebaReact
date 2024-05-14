@@ -1,4 +1,4 @@
-import './App.css'; // Archivo de estilos CSS para la landing page
+import './App.css';
 import React, { useState, useEffect } from 'react';
 import MiApi from './MiApi';
 import Buscador from './Buscador';
@@ -11,7 +11,7 @@ function App() {
       try {
         const response = await fetch('https://api.boostr.cl/feriados/en.json');
         const data = await response.json();
-        setFeriados(data.data); // Modifica para acceder al array dentro del objeto data
+        setFeriados(data.data); 
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -24,7 +24,7 @@ function App() {
     <div className="App landing-page">
       <h1>Feriados Chile 2024</h1>
       <MiApi />
-      <Buscador feriados={feriados} /> {/* Pasa la lista de feriados como una prop */}
+      <Buscador feriados={feriados} /> 
     </div>
   );
 }
